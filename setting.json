@@ -1,7 +1,7 @@
 {
     // Editor
     "editor.fontSize": 20,
-    "editor.fontFamily": "Fira Code, Operator Mono",
+    "editor.fontFamily": "",
     "editor.fontLigatures": true,
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
@@ -24,14 +24,18 @@
     "editor.formatOnSave": true,
   
     // Enable format on save for JavaScript and React
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Use Prettier as the default formatter
     "[javascript]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.requireConfig": false, // Disable the need for a config file
+  "files.associations": {
+    "*.jsx": "javascriptreact" // Associate .jsx files with React
+  }
   
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
